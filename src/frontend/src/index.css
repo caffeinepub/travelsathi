@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* TravelSathi - Warm Saffron + Teal palette */
+    --background: 0.98 0.005 80;
+    --foreground: 0.18 0.02 260;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 260;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 260;
+
+    /* Primary: Saffron orange */
+    --primary: 0.65 0.18 45;
+    --primary-foreground: 1 0 0;
+
+    /* Secondary: Teal */
+    --secondary: 0.55 0.14 185;
+    --secondary-foreground: 1 0 0;
+
+    --muted: 0.94 0.01 80;
+    --muted-foreground: 0.5 0.02 260;
+
+    --accent: 0.94 0.04 45;
+    --accent-foreground: 0.3 0.08 45;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.9 0.01 80;
+    --input: 0.9 0.01 80;
+    --ring: 0.65 0.18 45;
+
+    --radius: 0.875rem;
+
+    --chart-1: 0.65 0.18 45;
+    --chart-2: 0.55 0.14 185;
+    --chart-3: 0.6 0.15 120;
+    --chart-4: 0.62 0.17 300;
+    --chart-5: 0.58 0.2 25;
+
+    --sidebar: 0.97 0.005 80;
+    --sidebar-foreground: 0.18 0.02 260;
+    --sidebar-primary: 0.65 0.18 45;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.04 45;
+    --sidebar-accent-foreground: 0.3 0.08 45;
+    --sidebar-border: 0.9 0.01 80;
+    --sidebar-ring: 0.65 0.18 45;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .gradient-beach {
+    background: linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #22d3ee 100%);
+  }
+  .gradient-mountain {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #93c5fd 100%);
+  }
+  .gradient-heritage {
+    background: linear-gradient(135deg, #b45309 0%, #f59e0b 50%, #fcd34d 100%);
+  }
+  .gradient-spiritual {
+    background: linear-gradient(135deg, #c2410c 0%, #f97316 50%, #fed7aa 100%);
+  }
+  .gradient-nature {
+    background: linear-gradient(135deg, #166534 0%, #16a34a 50%, #86efac 100%);
+  }
+  .gradient-adventure {
+    background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #c4b5fd 100%);
+  }
+
+  .card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+}
